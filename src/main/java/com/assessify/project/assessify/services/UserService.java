@@ -2,9 +2,13 @@ package com.assessify.project.assessify.services;
 
 import com.assessify.project.assessify.models.User;
 import com.assessify.project.assessify.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
 
+    @Autowired
     UserRepository userRepository;
 
     public User addUser(String email, String username, String password) {

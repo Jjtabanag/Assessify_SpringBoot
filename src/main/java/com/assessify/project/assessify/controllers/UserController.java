@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @RequestMapping("/api")
+@RestController
 public class UserController {
 
     @Autowired

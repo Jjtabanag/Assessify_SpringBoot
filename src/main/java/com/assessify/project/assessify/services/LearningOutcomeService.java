@@ -3,9 +3,13 @@ package com.assessify.project.assessify.services;
 import com.assessify.project.assessify.models.LearningOutcome;
 import com.assessify.project.assessify.models.Section;
 import com.assessify.project.assessify.repositories.LearningOutcomeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class LearningOutcomeService {
 
+    @Autowired
     LearningOutcomeRepository learningOutcomeRepository;
 
     public LearningOutcome addLearningOutcome(String learningOutcome, Section section) {

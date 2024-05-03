@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RequestMapping(value = "api/")
+@RequestMapping(value = "/api")
 @RestController
 public class APIController {
 
     @Autowired
     private UserRepository userRepo;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "")
     public String getPage() {
         return "Welcome to the Assessify Backend API!";
     }

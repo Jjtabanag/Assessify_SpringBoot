@@ -3,9 +3,13 @@ package com.assessify.project.assessify.services;
 import com.assessify.project.assessify.models.Option;
 import com.assessify.project.assessify.models.Question;
 import com.assessify.project.assessify.repositories.OptionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OptionService {
 
+    @Autowired
     OptionRepository optionRepository;
 
     public Option addOption(Question question, int optionNo, String option) {

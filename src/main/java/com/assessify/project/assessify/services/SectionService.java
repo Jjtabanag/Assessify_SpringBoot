@@ -4,9 +4,13 @@ import com.assessify.project.assessify.models.Assessment;
 import com.assessify.project.assessify.models.QuestionType;
 import com.assessify.project.assessify.models.Section;
 import com.assessify.project.assessify.repositories.SectionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SectionService {
 
+    @Autowired
     SectionRepository sectionRepository;
 
     public Section addSection(int sectionNo, String name, String description, int length, QuestionType type, Assessment assessment) {

@@ -3,9 +3,14 @@ package com.assessify.project.assessify.services;
 import com.assessify.project.assessify.models.Question;
 import com.assessify.project.assessify.models.Section;
 import com.assessify.project.assessify.repositories.QuestionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 
 public class QuestionService {
 
+    @Autowired
     QuestionRepository questionRepository;
 
     public Question addQuestion(int questionNo, String question, String answer, Section section) {
